@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+    
+    <div id="app">
+        <!-- v-on 事件中可以使用  $event  鼠标属性 -->
+        <!-- <input type="button" value="按钮" @click="show($event)"> -->
+        
+        <!--
+        冒泡机制  点击按钮 先调用按钮 然后调用parent
+        捕获机制  点击按钮 先调用parent 后调用按钮
+
+        .stop   阻止事件冒泡
+        .prevent  阻止元素的默认事件
+        .capture  将js事件机制从默认冒泡机制转换成捕获机制
+        .self   只有自身才能触发事件(不能被子元素触发)
+        .once   事件只被触发一次
+        -->
+
+        <!-- 阻止事件冒泡
+            1. @click.stop
+            2. @click="show($event)"
+                事件中写  ev.cancelBubble=true;-->
+        <!-- <div @click="show2">
+            <input type="button" value="按钮2" @click.stop="show()">
+        </div> -->
+
+        <!-- 阻止默认事件 
+            1. .prevent
+            2. @click="show($event)"
+                事件中写  ev.preventDefault();-->
+        <!-- 右键  默认打开右键菜单，使用prevent阻止右键菜单打开 -->
+        <!-- <input type="button" value="按钮" @contextmenu.prevent="show"> -->
+
+        <!-- 键盘事件 
+            按键id  $event ev.keyCode-->
+        <!-- keydown 事件触发时，按键没有进入数据框
+             keyup   事件触发时，按键已进入数据框 -->
+        <!-- 回车   @keydown.13     @keydown.enter
+             上     @keydown.     @keydown.up
+             下     @keydown.     @keydown.down
+             左     @keydown.     @keydown.left
+             右     @keydown.     @keydown.right
+                    -->
+        <input type="text" @keydown.a="show">
+
+    </div>
+</body>
+
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+
+        },
+        methods:{
+            // show:function(ev){
+            //     alert(ev.clientX);
+            // },
+            show:function(){
+                alert(1);
+            },
+            show2:function(){
+                alert(2);
+            },
+        },
+    })
+</script>
+</html>

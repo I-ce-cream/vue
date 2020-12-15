@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>解决插值表达式闪烁问题</title>
+    <style>
+        [v-cloak]{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+
+<!--
+插值表达式闪烁原因
+vue没有被成功加载前，new的vue对象无法创建
+vue对象无法对控制区域进行控制
+视图区块会按照标签默认的解析方式显示插值表达式
+
+解决方法
+vue成功加载前，隐藏视图
+加载成功后，显示视图，看不到闪烁效果
+-->
+<div v-cloak id="app">
+    {{msg}}
+</div>
+<script src="../js/vue.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            msg:'欢迎使用vue',
+        }
+    });
+</script>
+</body>
+</html>

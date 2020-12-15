@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>循环指令v-for </title>
+</head>
+<body>
+
+<div id="app">
+    <!--1. 用v-for指令遍历普通数组-->
+    <!--item 代表数组中元素-->
+<!--    <p v-for="item in list">{{item}}</p>-->
+
+    <!--访问数组元素 和元素的索引-->
+<!--    <p v-for="(item,index) in list">元素:{{item}}-&#45;&#45;&#45;&#45;索引{{index}}</p>-->
+
+    <!--2. 用v-for遍历对象数组-->
+<!--    <p v-for="(item) in list2">name:{{item.name}}-&#45;&#45;&#45;&#45;age:{{item.age}}</p>-->
+
+    <!--3. 用v-for遍历对象  键值对  值在前  键在后-->
+<!--    <p v-for="(value,key) in obj">键：{{key}}-&#45;&#45;值：{{value}}</p>-->
+<!--    <p v-for="(value,key,index) in obj">键：{{key}}-&#45;&#45;值：{{value}}-&#45;&#45;索引:{{index}}</p>-->
+
+    <!--4. 用v-for指令遍历数字-->
+<!--    <p v-for="item in 10">{{item}}</p>-->
+
+    <!--key  value 可以使用缩写  k  v-->
+    <hr>//横杠
+    <p v-for="(v,k) in obj">{{k}}:{{v}}</p>
+</div>
+
+<script src="../js/vue.js"></script>
+<script>
+    new Vue({
+        el:'#app',//element
+        data:{
+            list:[1,2,3,4,5,6],
+            list2:[
+                {name:'赵云',age:18},
+                {name:'鲁班',age:8},
+                {name:'龙太子',age:28},
+                {name:'李逍遥',age:38},
+            ],
+            obj:{name:'赵云',age:18,gender:'male'},
+        }
+    })
+
+    /*for ...in 做循环 循环数组和对象*/
+    let arr=[true,2,3,4,5,6];
+    console.log(true in arr)//false
+    console.log(0 in arr)//true
+    /*i 代表数组中的索引*/
+    for(let i in arr) console.log(i,arr[i]);
+
+
+    /*for ... in 循环对象*/
+    let obj={name:'赵云',age:18,gender:'male'};
+    console.log('name' in obj);//true
+    console.log('赵云' in obj);//false
+    /* i 代表键值对中的键*/
+    for(let i in obj) console.log(i,obj[i]);
+</script>
+</body>
+</html>

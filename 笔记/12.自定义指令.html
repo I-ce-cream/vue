@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../js/vue.js"></script>
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script src="../js/lodash.js"></script>
+</head>
+
+<body>
+    <div id='app'>
+        <!-- <span v-red="{color:'green'}">abcd</span> -->
+
+        <div v-drag :style="a" ></div>
+    </div>
+</body>
+
+<script>
+    // 自定义指令  在vue实例内为 directives
+    // Vue.directive('red',function(el){
+    //     el.style.background='red';
+    // });
+    
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            a:{
+                width:'100px',
+                height:'100px',
+                background:'blue',
+                position:'absolute',
+                right:0,
+                top:0
+            },
+        },
+        directives:{
+            // red:function(el){
+            //     el.style.background='red';
+            // },
+
+            red:function(el,binding){
+                el.style.color='red';
+                el.style.background=binding.value.color;
+            },
+
+            // 拖拽效果
+            // el原生dom元素
+            drag:function(el){
+                el.onmousedown=function(ev){
+                    var disX=ev.clientX - el.offsetLeft;
+                    var disY=ev.clientY - el.offsetTop;
+
+                    document.onmousemove=function(ev){
+                        var l=ev.clientX-disX;
+                        var t=ev.clientY-disY;
+                        el.style.left=l+'px';
+                        el.style.top=t+'px';
+
+                        this.a.background='rgb('+(l%256)+','+(t%256)+','+((l+t)%256)+')';
+                    };
+                    document.onmouseup=function(){
+                        document.onmousemove=null;
+                        document.onmouseup=null;
+                    };
+                };
+            },
+        }
+    });
+
+    // document.onmousemove=function(ev){
+    //     var l = ev.offsetX;
+    //     var t = ev.offsetY;
+    //     vm.a.background='rgb('+(l%256)+','+(t%256)+','+((l+t)%256)+')';
+    // };
+    // 钩子函数
+    // bind  元素绑定时 只调用一次
+    // unbind 元素解绑时 只调用一次
+    // inserted 元素被插入父节点时
+    // 。。。
+
+    
+
+    
+
+    
+</script>
+</html>

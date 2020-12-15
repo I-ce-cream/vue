@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- v-model  双向绑定 -->
+        <!-- <input type="text" v-model="msg"> -->
+
+        <!-- 单次绑定 -->
+        <!-- <input type="text" v-text="msg"> -->
+
+        <!-- html文本 -->
+        <input type="text" v-model="msg">
+        <div v-html="msg"></div>
+        <br>
+        {{msg}}
+
+    </div>
+</body>
+
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            msg:'abc'
+        },
+        methods:{
+
+        },
+    })
+</script>
+</html>

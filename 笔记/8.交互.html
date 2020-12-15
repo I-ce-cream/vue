@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../js/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+
+<div id='app'>
+    <!-- 
+        get
+        post
+        jsonp
+     -->
+     <input type="text" v-model="count">
+     <input type="button" value="笑话" @click="getJoke">
+     <p v-for="(item,index) in joke.jokes" v-if="isShow" >{{index+1}}:{{item}}</p>
+     <p v-if="!isShow">{{err}}</p>
+     
+</div>
+    
+</body>
+
+<!-- 
+    接口地址                                  请求响应完成时触发        请求响应失败时触发
+    axios.get(地址?key=value&key2=value2).then(function(response){},function(err){})
+                   传递参数                   response  服务器响应内容         err  错误信息
+
+    axios.post(地址,{key:value,key2:value2}).then(function(response){},function(err){})
+
+
+    测试接口
+    https://autumnfish.cn/api/joke
+    https://autumnfish.cn/api/joke/list?num=3
+ -->
+
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            joke:"",
+            err:"",
+            isShow:true,
+            count:'',
+        },
+        methods:{
+            getJoke:function(){
+                var obj_vue = this;//axios外部this可以获取到vue  但内部无法获取，因此保存this
+                
+                //get 参数传递  拼接url
+                axios.get("https://autumnfish.cn/api/joke/list?num="+obj_vue.count
+                ).then(function(response){
+                    // console.log(response.data)
+                    obj_vue.joke = response.data;
+                    obj_vue.isShow = true;
+                },function(err){
+                    obj_vue.err = err;
+                    obj_vue.isShow = false;
+                })
+
+                // //get  参数传递 使用  params
+                // axios.get("https://autumnfish.cn/api/joke/list?"
+                // ,{params:{
+                //     num: obj_vue.count,
+                // }}
+                // ).then(function(response){
+                //     // console.log(response.data)
+                //     obj_vue.joke = response.data;
+                //     obj_vue.isShow = true;
+                // },function(err){
+                //     obj_vue.err = err;
+                //     obj_vue.isShow = false;
+                // })
+            }
+        },
+    })
+</script>
+</html>
+
+
+<!-- Axios.get('demo/url', {
+    params: {    
+    id: 123,    
+    name: 'Henry',    
+    sex: 1,    
+    phone: 13333333    
+    }    
+    }) -->
+
+
+<!-- Axios.post('demo/url', {
+    id: 123,        
+    name: 'Henry',        
+    sex: 1,        
+    phone: 13333333        
+    }) -->

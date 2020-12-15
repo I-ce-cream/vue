@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VUE最简单实例</title>
+</head>
+<body>
+<script src="../js/vue.js"></script>
+
+
+<!--
+v-if和v-show的区别
+v-if指令通过状态来控制元素的显示和隐藏  是直接操作dom来添加或移除元素
+v-if指令的初始消耗较小  但切换消耗较大
+适用场景：可能永远都不被显示的元素 或很少切换状态的元素
+
+v-show指令控制元素的显示和隐藏 是通过改变元素的display属性
+所以v-show控制的元素 最开始就要被加载出来  v-show指令的初始消耗较大
+但切换消耗较小
+适用场景：切换比较频繁的元素
+
+-->
+<div id="app">
+    <p v-if="flag">{{msg}}---v-if</p>
+    <p v-show="flag">{{msg}}---v-show</p>
+    <button @click="toggle">toggle</button>
+</div>
+
+
+<script>
+    new Vue({
+        el:'#app',//element
+        data:{
+            msg:'欢迎光临',
+            flag:true,
+        },
+        methods:{
+            toggle(){
+                this.flag = !this.flag;
+            }
+        }
+    })
+</script>
+</body>
+</html>

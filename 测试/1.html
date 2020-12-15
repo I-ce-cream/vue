@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../js/vue.js"></script>
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script src="../js/lodash.js"></script>
+</head>
+<body>
+    <div>
+        <input type="text" v-model="a">
+        <p v-text="a"></p>
+        <br>
+        <li v-for="item in b">{{item}}</li>
+
+    </div>
+    
+</body>
+
+<script>
+    new Vue({
+        el:'div',
+        data:{
+            a:'',
+            b:['a','b','c','d'],
+        },
+
+    })
+</script>
+</html>

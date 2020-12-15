@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>条件渲染 v-if</title>
+</head>
+<body>
+<script src="../js/vue.js"></script>
+
+
+
+<div id="app">
+<!--  v-if指令用来做条件渲染
+  可以接v-else-if  v-else 等指令   -->
+
+<!--    <p v-if="isLogin">已登录</p>-->
+<!--    <p v-else>未登录</p>-->
+
+    <!--1 普通会员  2 超级会员   3 超级大会员  其他值都是普通用户-->
+    <p v-if="vip==1">普通会员</p>
+    <p v-else-if="vip==2">超级会员</p>
+    <p v-else-if="vip==3">超级大会员</p>
+    <p v-else>普通用户</p>
+
+</div>
+
+<script>
+    let vm = new Vue({
+        el:'#app',//element
+        data:{
+            msg:'欢迎光临',
+            flag:true,
+            isLogin:false,
+            vip:0,
+        }
+    });
+    console.log(vm);
+</script>
+</body>
+</html>

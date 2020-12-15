@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>双向绑定实例</title>
+</head>
+<body>
+<!--
+mv(view)vm
+m(model)v(view)c(controller)
+
+单向数据绑定：
+通过vue对象 ==>视图的显示
+
+双向数据绑定：
+通过vue对象<==>视图的显示
+
+input和div同步变化原因
+1.input内容改变，使vue里面的data内的msg2发生变化
+2.msg2发生变化使div内参数显示发生变化
+-->
+<div id="app">
+    <input type="text" v-model="msg2">
+    <div>{{msg2}}</div>
+</div>
+<script src="../js/vue.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            msg:'欢迎使用vue',
+            msg2:'双向绑定数据',
+        }
+    })
+</script>
+
+</body>
+</html>

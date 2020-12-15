@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../js/vue.js"></script>
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script src="../js/lodash.js"></script>
+</head>
+<body>
+    <div id='app'>
+        <aaa></aaa>
+    </div>
+    
+    
+</body>
+
+<template id='aaa'>
+    <div>
+        <h1>11111</h1>
+        <bbb></bbb>
+    </div>
+</template>  
+
+<script>
+    new Vue({
+        el:'#app',
+        components:{
+            'aaa':{
+                // 模板只能有一个根元素
+                template:'<div><h1>这是aaa组件,{{msg}}</h1><bbb></bbb></div>',
+                
+                data(){
+                    return{
+                        msg:'aaa服组件数据'
+                    }
+                },
+                
+                // 组件里面放组件  为子组件
+                // vue 默认情况下  子组件不能访问父组件的数据
+                components:{
+                    'bbb':{
+                        template:'<h2>这是bbb组件</h2>'
+                    },
+                },
+            },  
+        },
+    })
+</script>
+</html>

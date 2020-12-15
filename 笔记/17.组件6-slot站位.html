@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../js/vue.js"></script>
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script src="../js/lodash.js"></script>
+</head>
+<body>
+    <div id='app'>
+        <aaa>
+            <ul slot="ul-slot">
+                <li>111</li>
+                <li>222</li>
+                <li>333</li>
+            </ul>
+            <ol slot="ol-slot">
+                <li>111</li>
+                <li>222</li>
+                <li>333</li>
+            </ol>
+        </aaa>
+    </div>
+</body>
+<!-- slot 作用  站位 -->
+
+<template id="aaa">
+    <div>
+        <h1>XXX</h1>
+        <!-- 原组件内有特定布局时  模板用slot站位 -->
+        <!-- 如果没有，slot会显示自己带的数据 -->
+        <!-- 不写name时  代表样式内全部内容 -->
+        <!-- 谢name 并且控件指定 slot名称，则指定代替 -->
+        <slot name="ol-slot">默认情况</slot>
+        <slot name="ul-slot">默认情况2</slot>
+        <p>welcome vue</p>
+    </div>
+</template>
+
+<script>
+    new Vue({
+        el:'#app',
+        components:{
+            'aaa':{
+                template:'#aaa'
+            }
+        },
+    })
+</script>
+</html>

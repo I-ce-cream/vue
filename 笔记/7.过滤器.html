@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../js/vue.js"></script>
+    <script src="../js/jquery-3.5.1.js"></script>
+    <!-- <script src="https://unpkg.com/lodash"></script> -->
+    <script src="../js/lodash.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- 过滤器 filters -->
+        <!-- {{ 'WELCOME' | lowercase | capitalize }} -->
+        <!-- {{12|addChar('￥')}} -->
+
+        <!-- 延迟执行  debounce -->
+        <!-- <input type="text" @keyup="show"> -->
+
+        <!-- 限制 limitBy  -->
+        <!-- <ul>
+            <li v-for="val in filteredarr">{{val}}</li>
+        </ul> -->
+
+        <!-- 过滤 filterby 
+        <input type="text" v-model="a">
+        <ul>
+            <li v-for="val in filteredarr2">{{val}}</li>
+        </ul> -->
+
+        <!-- 排序  orderby -->
+        <ul>
+            <li v-for="val in filteredarr3">{{val}}</li>
+        </ul>
+    </div>
+</body>
+<script>
+    // Vue.filter('capitalize',function(value){
+    //             if(!value) return ''
+    //             value = value.toString()
+    //             return value.charAt(0).toUpperCase() + value.slice(1)
+    //     })
+
+    new Vue({
+        el:'#app',
+        data:{
+            a:'abc',
+            arr:[1,2,3,4,5,6,7,8,9,10],
+            arr2:['abc','def','cds','agh','cve','ghi','oip'],
+            list:[
+                {name:'a',age:4},
+                {name:'a',age:2},
+                {name:'g',age:6},
+                {name:'e',age:1},
+                {name:'e',age:2}
+            ]
+        },
+        methods:{
+            // debounce 延迟执行  需要配合事件使用,不再使用过滤器方式
+            // 需要调用 lodash.js
+            // show:_.debounce(function(){
+            //     alert(1);
+            // },1000),
+
+            // show:function(){
+            //     alert(1);
+            // },
+        },
+        computed:{
+            // limitBy 在 vue2.0中被移除  使用计算属性  slice方法限制输出数量
+            // slice(起始序号，终止序号)  最后取值渠道终止序号前一位
+            // 只能数组使用
+            filteredarr:function(){
+                return this.arr.slice(4,5);
+            },
+
+            // filterBy vue2.0中被移除  使用计算属性 filter方法
+            // filter 参数使用一个方法  可以独立书写  在这边调用
+            filteredarr2:function(){
+                var self = this
+                return self.arr2.filter(function(str){
+                    return str.indexOf(self.a) != -1
+                })
+            },
+
+            // orderby  vue2.0中被移除  使用计算属性  lodash  中  _orderBy 方法
+            filteredarr3:function(){
+                // 单字段数组排序，参数1 要排序的数组  ，参数2  要排序的字段，单字段数组填空，参数3  过滤方式
+                return _.orderBy(this.arr2,[],['asc'])
+
+                // 可以对集合数组每个字段进行排序
+                // return _.orderBy(this.list,['name','age'],['asc','desc'])
+
+            }
+        },
+        filters:{
+            // 大写第一个字母
+            capitalize:function(value){
+                if(!value) return ''
+                value = value.toString()
+                return value.charAt(0).toUpperCase() + value.slice(1)
+            },
+            
+            // 大写全部字母
+            uppercase:function(value){
+                if(!value) return ''
+                return value.toUpperCase()
+            },
+
+            // 小写全部字母
+            lowercase:function(value){
+                if(!value) return ''
+                return value.toLowerCase()
+            },
+
+            // 转换成货币
+            addChar:function(value,char){
+                if(!value) return ''
+                if(!char) char='$';
+                return char+value.toFixed(2)
+            },
+            
+        },
+    })
+
+    
+</script>
+</html>

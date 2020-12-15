@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>跑马灯效果</title>
+</head>
+<body>
+
+
+<script src="../js/vue.js"></script>
+
+<div id="app">
+    <p v-text="msg"></p>
+    <div>
+        <button @click="start">start</button>
+        <button @click="stop">stop</button>
+    </div>
+</div>
+
+<script>
+    let vm = new Vue({
+        el:'#app',//element
+        data:{
+            msg:'一二三四五六七，233',
+            interval_id:null,
+        },
+        methods:{
+            start:function () {
+                //跑马灯效果逻辑
+                //不断将字符串第一个字符挪到最后面
+
+
+                //如果有定时器，不创建新定时器
+                if(this.interval_id!==null) return;
+                this.interval_id=setInterval(()=>{
+                    //1.找到字符串第一位字符 a
+                    let str_a=this.msg.slice(0,1);
+                    //2.拿到字符串剩下的字符 b
+                    let str_b=this.msg.slice(1);
+                    //3.将a拼接到b后面
+                    let new_str=str_b+str_a;
+                    this.msg=new_str;
+                },400);
+            },
+            stop(){
+                //清楚定时器
+                clearInterval(this.interval_id);
+                //清楚定时器id
+                this.interval_id=null;
+            },
+        }
+    });
+    //可以打印vue对象 查看如何取值
+    //console.log(vm);
+</script>
+</body>
+</html>

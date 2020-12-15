@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../js/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model='t1' @keyup="get">
+        <ul>
+            <li v-for="value in dataList">
+                {{value}}
+            </li>
+        </ul>
+        <p v-show="dataList.length==0">暂无数据...</p>
+    </div>
+</body>
+<!-- *************************************************************************
+没有找到 jsonp 代替 
+百度接口数据 没有成功获取
+
+-->
+
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            dataList:[],
+            t1:'',
+
+        },
+        methods:{
+            get:function(){
+                this.$http.jsonp('https://www.baidu.com/sugrec?pre=1&p=3&ie=utf-8&json=1&prod=pc&from=pc_web&csor=2&cb=jQueryshow',{
+                    wd:this.t1
+                    },{
+                        jsonp:'cb'
+                }).then(function(res){
+                    this.dataList=res.data.s;
+                },function(){
+
+                });
+
+                // axios.get("https://www.baidu.com/sugrec?pre=1&p=3&ie=utf-8&json=1&prod=pc&from=pc_web&csor=2&callback=jQueryshow",{
+                //     params:{
+                //         wd:this.t1
+                //     }}).then(function(response){
+                //         this.dataList = response.data.s;
+                // },function(err){
+                    
+                // });
+            },
+        }
+    })
+</script>
+
+</html>

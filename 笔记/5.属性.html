@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+    <!-- <div id="app">
+        <img :src="url" alt=""  :width="w" :title="t">
+    </div>     -->
+    
+
+    <div id="app">
+        <!-- <strong :class="r">文章。。。。</strong> -->
+        <!-- <strong :class="[r,b]">文章。。。。</strong> -->
+        <!-- <strong :class="{red:flag1,blue:flag2}">文章。。。。</strong> -->
+
+        <!-- <strong :class="json">文章。。。。</strong> -->
+
+        <!-- style 里面放的都是json -->
+        <!-- <strong :style="c">文章。。。。</strong> -->
+        <!-- <strong :style="[c,b]">文章。。。。</strong> -->
+        <strongb :style="a">文章。。。。</strongb>
+    </div>
+</body>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            url:'../js/1024x0_1_q95_autohomecar__ChsEe10xTlWAHs3aAATMKPEBpq4104.jpg',
+            w:'100px',
+            t:'abcde',
+            r:'red',
+            b:'blue',
+            flag1:true,
+            flag2:true,
+
+            json:{
+                red:true,
+                blue:true,
+            },
+
+            c:{
+                color:'red',
+            },
+            b:{
+                background:'blue',
+            },
+            a:{
+                color:'red',
+                background:'green',
+            }
+        },
+        methods:{
+        },
+    })
+</script>
+<style>
+    .red{
+        color: red;
+    }
+    .blue{
+        background:blue;
+    }
+</style>
+</html>

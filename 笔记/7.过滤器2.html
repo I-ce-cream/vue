@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../js/vue.js"></script>
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script src="../js/lodash.js"></script>
+</head>
+<body>
+    <div id='app'>
+        <!-- <input type="text" v-model='a'>
+        <br>
+        {{a | toDou}} -->
+        {{t | date}}
+        <br>
+        <br>
+        <input type="text" v-model="msg | filterHtml">
+        <br>
+        <div v-html="msg"></div>
+        
+    </div>
+    
+</body>
+<!-- 自定义过滤器 -->
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            a:9,
+            t:Date.now(),//时间戳
+            msg:'<strong>welcome</strong>'
+        },
+        filters:{
+            toDou:function(val){
+                if(!val) return ''
+                return val<100?val<10?'00'+val:'0'+val:val;
+            },
+
+            // 时间戳转换器
+            // 时间戳为 毫秒级
+            // getMonth 从0开始  要 +1
+            // 天数使用getDate  不要用getDay
+            date:function(val){
+                var oDate=new Date(val);
+                return oDate.getFullYear()+'-'+(oDate.getMonth()+1)+'-'+oDate.getDate()+' '+toTime(oDate.getHours())+':'+toTime(oDate.getMinutes())+':'+toTime(oDate.getSeconds());
+            },
+
+            // 过滤html标记
+            // 使用双向过滤器
+            filterHtml:{
+                read:function(val){
+                    alert(1);
+                },
+                write:function(val){
+                    alert(2);
+                }
+            }
+        }
+    });
+
+    function toTime(val){
+        return val<10?'0'+val:val;
+    };
+
+    
+    //全局自定义 方法，在vue实例内filters 为内部方法
+    // Vue.filter('filterHtml',{
+    //     read:function(val){
+    //         return val.replace(/<[^<+]>/g);
+    //     },
+    //     write:function(){
+    //         return val;
+    //     }
+    // });
+</script>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>style样式绑定</title>
+</head>
+<body>
+
+<div id="app">
+    <!--1.  以字符串的方式-->
+    <!--    <p :style="'color:red;font-size:30px'">{{msg}}</p>-->
+
+    <!--2.  以变量的方式-->
+    <!--    <p :style="style1">{{msg}}</p>-->
+
+    <!--3.  以对象的方式-->
+    <!--对象语法，style里每一个样式的样式名对应键值对  键
+    样式值对应键值对 值
+
+    对象的键值对都是要字符串 而键默认就是字符串  所以值也要被设置为字符串-->
+    <!--    <p :style="{color:'red','font-size':'30px'}">{{msg}}</p>-->
+    <!--    <p :style="style2">{{msg}}</p>-->
+
+    <!--4.  以数组的方式-->
+    <p :style="[style2,style3]">{{msg}}</p>
+</div>
+
+<script src="../js/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',//element
+        data: {
+            msg: '欢迎光临',
+            style1: 'color:red;font-size:30px',
+            style2: {color: 'red', 'font-size': '30px'},
+            style3:{'font-style':'italic'},
+        }
+    })
+</script>
+</body>
+</html>

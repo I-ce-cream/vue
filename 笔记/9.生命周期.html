@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../js/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model="msg">
+        {{msg}}
+    </div>
+</body>
+
+<!-- 
+生命周期
+
+new Vue 创建实例
+
+钩子函数
+beforeCreate    实例创建之前
+created         实例已经创建
+beforeCompile   编译之前            2.* 没有
+Compiled        编译之后            2.* 没有
+ready           文本插入到文档中     2.* 没有
+beforeDestroy   销毁之前
+Destroyed       销毁之后
+
+mounted
+beforeMount
+
+updated
+beforeUpdate
+
+ -->
+
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            msg:'hello'
+        },
+        beforeCreate:function(){
+            alert('1');
+        },
+        created:function(){
+            alert('实例已经创建');
+        },
+        beforeMount:function(){
+            alert('mount  before');
+        },
+        mounted:function(){
+            alert('mount  after');
+        },
+        beforeUpdate:function(){
+            alert('update  before');
+        },
+        updated:function(){
+            alert('update  after');
+        },
+        beforeDestroy:function(){
+            alert('销毁前');
+        },
+        destroyed:function(){
+            alert('销毁后');
+        },
+        
+    });
+
+    // 点击页面销毁vue对象
+    document.onclick=function(){
+        vm.$destroy();
+    };
+</script>
+
+</html>

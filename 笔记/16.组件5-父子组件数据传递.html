@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../js/vue.js"></script>
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script src="../js/lodash.js"></script>
+</head>
+<body>
+    <div id='app'>
+        <aaa></aaa>
+    </div>
+    
+    
+</body>
+
+<template id='aaa'>
+    <div>
+        <h3>父组件   {{a}}</h3>
+        <br>
+        <bbb :amsg='msg' :amsg2='msg2' @child-msg="get"></bbb>
+    </div>
+</template>  
+
+<template id='bbb'>
+    <div>
+        <h3>这是bbb组件</h3>
+        <input type="button" value="发送子组件数据" @click="send">
+        <br>
+        <p>调用父组件数据：{{amsg}}，{{amsg2}}</p>
+        <br>
+        <p>子组件数据：{{bmsg}}</p>    
+    </div>
+</template>  
+
+<script>
+    new Vue({
+        el:'#app',
+        components:{
+            'aaa':{
+                // 模板只能有一个根元素
+                template:'#aaa',
+                
+                data(){
+                    return{
+                        a:'111',
+                        msg:'aaa服组件数据',
+                        msg2:'aaa  数据2',
+                    }
+                },
+                methods:{
+                    get(msg){
+                        this.a = msg;
+                    }
+                },
+
+                // 组件里面放组件  为子组件
+                // vue 默认情况下  子组件不能访问父组件的数据
+                components:{
+                    'bbb':{
+                        // props  获取父组件数据
+                        // 在模板内  bbb使用 ： 绑定父组件数据
+                        // 之后 在bbb模板内 定义绑定属性,并调用
+                        props:['amsg','amsg2'],
+
+                        // 可以使用json格式 该格式可以限定数据类型，类型错误时不显示
+                        // props:{
+                        //     'm':String,
+                        //     'bmsg2':Number,
+                        // }
+                        template:'#bbb',
+
+                        // 子组件数据
+                        data(){
+                            return{
+                                bmsg:'子组件数据',
+                            }
+                        },
+                        methods:{
+                            send(){
+                                this.$emit('child-msg',this.bmsg);
+                            },
+                        },
+                    },
+                },
+            },  
+        },
+    })
+</script>
+
+
+<!-- 
+1.子组件获取父组件数据
+    父组件使用子组件时 使用 ： 绑定父组件数据
+    子组件内使用props 定义属性，并在自身的模板内调用
+
+2.父组件获取子组件数据
+    子组件把数据发送给父组件
+    vm.$emit(事件名，子组件数据)
+
+    父组件接收数据
+    v-on  
+    @事件名  调用方法参数为子组件传递的数据
+ -->
+</html>

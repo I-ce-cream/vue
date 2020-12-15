@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../js/vue.js"></script>
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script src="../js/lodash.js"></script>
+</head>
+<body>
+    <div id='app'>
+        <aaa></aaa>
+    </div>
+    
+</body>
+<!-- 
+组件  一个大对象
+定义一个组件
+1.  全局组件
+    Vue.extend  构造器
+    Vue.component  注册组件  需要调用构造器
+
+2.  局部组件 放在某个Vue实例内部  components
+
+ -->
+<script>
+    
+    // 全局组件
+    var bbb=Vue.extend({
+        template:'<h3 @click="change">{{msg}}</h3>',
+        // data 必须是函数 可以省略
+        data:function(){
+            return{
+                msg:'hello world',
+            }
+        },
+        methods:{
+            change(){
+                this.msg = '你好';
+            }
+        },
+    });
+    // Vue.component('aaa',bbb);
+
+    // component 注册组件，第二参数为构造器，也可直接填json
+    // Vue.component('aaa',{
+    //     template:'<h3>标题3</h3>',
+    // });
+
+    new Vue({
+        el:'#app',        
+        components:{// 局部组件 只能当前Vue实例内使用
+            'aaa':bbb,
+        }
+    });
+
+    
+
+    
+
+    
+</script>
+</html>

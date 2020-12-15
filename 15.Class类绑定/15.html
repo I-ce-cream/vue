@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>class类绑定</title>
+    <style>
+        .red{color:red}
+        .blue{color:blue}
+        .green{color:greenyellow}
+        .big{font-size:50px}
+        .italic{font-style: italic}
+    </style>
+</head>
+<body>
+<script src="../js/vue.js"></script>
+<!--
+在vue指令中 如果没有带引号，会被当做变量来解析，会去vue定义里面找  没找到会报错
+带引号 会被当成字符串解析
+
+键值对中键一般是字符串  不用引号
+但如果键包含 - 等符号  例 big-1  需要引号 'big-1'
+-->
+
+<div id="app">
+    <!--1.  用变量方式  -->
+    <p :class="red" style="font-size: 30px;">{{msg}}</p>
+
+    <!--2.  用字符串方式  -->
+    <p :class="'blue'" style="font-size: 30px;">{{msg}}</p>
+
+    <!--3.数组方式-->
+    <!--会依次将数组里面的元素解析到class属性里面-->
+    <p :class="['red','big']" >{{msg}}</p>
+    <!--在数组里放变量-->
+    <p :class="[red1,'big']" >{{msg}}</p>
+    <!--在数组里放三元表达式-->
+    <p :class="[red1,isBig?'big':'']" >{{msg}}</p>
+    <!--在数组里放对象-->
+    <p :class="[red1,{'big':false}]" >{{msg}}</p>
+
+
+    <!--4.对象的方式-->
+    <p :class="{'green':true,'big':true}" >{{msg}}</p>
+    <p :class="class2" >{{msg}}</p>
+</div>
+
+
+
+<script>
+    new Vue({
+        el:'#app',//element
+        data:{
+            msg:'欢迎光临',
+            red:'red',
+            red1:'red italic',
+            isBig:false,
+            class2:{'green':true,'big':true},
+        }
+    })
+</script>
+</body>
+</html>

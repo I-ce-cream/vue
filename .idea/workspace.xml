@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="57c192e7-854d-45aa-9dbd-eadc6c97d144" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/18. v-for中key属性使用/18.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/13.双向数据绑定v-model/13.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="578">
+              <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/19. 条件渲染v-if/19.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/20 条件渲染 v-show/20.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="561">
+              <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/14.使用v-model实现简单计算器/14.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/16.style样式绑定/16.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/15.Class类绑定/15.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="697">
+              <caret line="41" column="32" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
+              <folding>
+                <element signature="n#style#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/12.事件修饰符/12.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1190">
+              <caret line="70" column="13" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/17.循环指令 v-for/17.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/2.VUE最简单实例/1.html" />
+        <option value="$PROJECT_DIR$/3.VUE双向绑定/3.html" />
+        <option value="$PROJECT_DIR$/4.MVVM原理/4.html" />
+        <option value="$PROJECT_DIR$/6. v-text和v-html指令/6.html" />
+        <option value="$PROJECT_DIR$/7.解决赋值表达式闪烁问题/7.html" />
+        <option value="$PROJECT_DIR$/8.属性绑定v-bind/8.html" />
+        <option value="$PROJECT_DIR$/10.vue跑马灯效果/10.html" />
+        <option value="$PROJECT_DIR$/12.事件修饰符/12.html" />
+        <option value="$PROJECT_DIR$/13.双向数据绑定v-model/13.html" />
+        <option value="$PROJECT_DIR$/14.使用v-model实现简单计算器/14.html" />
+        <option value="$PROJECT_DIR$/15.Class类绑定/15.html" />
+        <option value="$PROJECT_DIR$/16.style样式绑定/16.html" />
+        <option value="$PROJECT_DIR$/18. v-for中key属性使用/18.html" />
+        <option value="$PROJECT_DIR$/19. 条件渲染v-if/19.html" />
+        <option value="$PROJECT_DIR$/20 条件渲染 v-show/20.html" />
+        <option value="$PROJECT_DIR$/20 条件渲染 v-show/test.html" />
+        <option value="$PROJECT_DIR$/17.循环指令 v-for/17.html" />
+        <option value="$PROJECT_DIR$/9.事件绑定v-on/9.html" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="953" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="VUE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VUE" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VUE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VUE" type="462c0819:PsiDirectoryNode" />
+              <item name="2.VUE最简单实例" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VUE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VUE" type="462c0819:PsiDirectoryNode" />
+              <item name="3.VUE双向绑定" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VUE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VUE" type="462c0819:PsiDirectoryNode" />
+              <item name="4.MVVM原理" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VUE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VUE" type="462c0819:PsiDirectoryNode" />
+              <item name="6. v-text和v-html指令" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VUE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VUE" type="462c0819:PsiDirectoryNode" />
+              <item name="7.解决赋值表达式闪烁问题" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VUE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VUE" type="462c0819:PsiDirectoryNode" />
+              <item name="8.属性绑定v-bind" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VUE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VUE" type="462c0819:PsiDirectoryNode" />
+              <item name="9.事件绑定v-on" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VUE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VUE" type="462c0819:PsiDirectoryNode" />
+              <item name="10.vue跑马灯效果" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VUE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VUE" type="462c0819:PsiDirectoryNode" />
+              <item name="12.事件修饰符" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VUE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VUE" type="462c0819:PsiDirectoryNode" />
+              <item name="13.双向数据绑定v-model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VUE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VUE" type="462c0819:PsiDirectoryNode" />
+              <item name="14.使用v-model实现简单计算器" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VUE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VUE" type="462c0819:PsiDirectoryNode" />
+              <item name="15.Class类绑定" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VUE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VUE" type="462c0819:PsiDirectoryNode" />
+              <item name="16.style样式绑定" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VUE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VUE" type="462c0819:PsiDirectoryNode" />
+              <item name="17.循环指令 v-for" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VUE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VUE" type="462c0819:PsiDirectoryNode" />
+              <item name="18. v-for中key属性使用" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VUE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VUE" type="462c0819:PsiDirectoryNode" />
+              <item name="19. 条件渲染v-if" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VUE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VUE" type="462c0819:PsiDirectoryNode" />
+              <item name="20 条件渲染 v-show" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VUE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VUE" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/20 条件渲染 v-show" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\课程\学习笔记\VUE\20 条件渲染 v-show" />
+      <recent name="D:\课程\学习笔记\VUE\19. 条件渲染v-if" />
+      <recent name="D:\课程\学习笔记\VUE\18. v-for中key属性使用" />
+      <recent name="D:\课程\学习笔记\VUE\17.循环指令 v-for" />
+      <recent name="D:\课程\学习笔记\VUE\16.style样式绑定" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\课程\学习笔记\VUE\10.vue跑马灯效果" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="57c192e7-854d-45aa-9dbd-eadc6c97d144" name="Default Changelist" comment="" />
+      <created>1605152125669</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605152125669</updated>
+      <workItem from="1605152126978" duration="11477000" />
+      <workItem from="1605236248817" duration="16724000" />
+      <workItem from="1605496748248" duration="29000" />
+      <workItem from="1605505318915" duration="5639000" />
+      <workItem from="1605596813328" duration="8390000" />
+      <workItem from="1605681363695" duration="1824000" />
+      <workItem from="1605750047047" duration="13000" />
+      <workItem from="1605752519791" duration="840000" />
+      <workItem from="1605753990223" duration="714000" />
+      <workItem from="1605756469450" duration="2648000" />
+      <workItem from="1605839436832" duration="4254000" />
+      <workItem from="1606096342780" duration="4956000" />
+      <workItem from="1606123831263" duration="1202000" />
+      <workItem from="1606182685542" duration="7048000" />
+      <workItem from="1606270071027" duration="2926000" />
+      <workItem from="1606355960039" duration="3678000" />
+      <workItem from="1606705347286" duration="8000" />
+      <workItem from="1606790183072" duration="1154000" />
+      <workItem from="1606958946794" duration="21000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="73545000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30743983" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/js/vue.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-202657">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2.VUE最简单实例/1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="25" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3.VUE双向绑定/3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="9" selection-start-line="24" selection-end-line="37" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.MVVM原理/4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="38" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/6. v-text和v-html指令/6.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/7.解决赋值表达式闪烁问题/7.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/8.属性绑定v-bind/8.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/9.事件绑定v-on/9.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/10.vue跑马灯效果/10.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="44" column="37" lean-forward="true" selection-start-line="44" selection-start-column="37" selection-end-line="44" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/20 条件渲染 v-show/test.html" />
+    <entry file="file://$PROJECT_DIR$/18. v-for中key属性使用/18.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/13.双向数据绑定v-model/13.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/19. 条件渲染v-if/19.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/14.使用v-model实现简单计算器/14.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/16.style样式绑定/16.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/15.Class类绑定/15.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="41" column="32" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/12.事件修饰符/12.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1190">
+          <caret line="70" column="13" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/17.循环指令 v-for/17.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/20 条件渲染 v-show/20.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

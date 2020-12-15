@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../js/vue.js"></script>
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script src="../js/lodash.js"></script>
+    <script src="../js/vue-router.js"></script>
+</head>
+<body>
+    <div id='box'>
+        <ul>
+            <li>
+                <!-- 跳转连接  Vue中使用v-link -->
+                <router-link to="/home">主页</router-link>
+            </li>
+            <li>
+                <router-link to="/news">新闻</router-link>
+            </li>
+        </ul>
+        <div>
+            <!-- 展示内容 -->
+            <router-view></router-view>
+        </div>
+    </div>
+    
+</body>
+
+<template id="home">
+    <div>
+        <h3>我是主页</h3>
+        <div>
+            <router-link to='/home/login'>登录</router-link>
+            <router-link to='/home/reg'>注册</router-link>
+        </div>
+        <div>
+            <router-view></router-view>
+        </div>
+    </div>
+</template>
+
+<template id="news">
+    <div>
+        <h3>我是新闻</h3>
+        <div>
+            <router-link to='/news/detail/001'>新闻001</router-link>
+            <router-link to='/news/detail/002'>新闻002</router-link>
+        </div>
+        <router-view></router-view>
+    </div>
+</template>
+
+<template id="login">
+    <h3>我是登录信息</h3>
+</template>
+
+<template id="reg">
+    <h3>我是注册信息</h3>
+</template>
+
+<template id="detail">
+    <!-- id参数  json格式 -->
+    <p>{{$route.params}}</p>
+    <br>
+    <!-- 没测出 -->
+    <!-- <p>{{$route.path}}</p> -->
+    <br>
+    <p>{{$route.query}}</p>
+</template>
+
+<script>
+
+    // Home News 组件准备
+    var Home=Vue.extend({
+        template:'#home'
+    });
+
+    var News=Vue.extend({
+        template:'#news'
+    });
+
+    var login=Vue.extend({
+        template:'#login'
+    });
+
+    var reg=Vue.extend({
+        template:'#reg'
+    });
+
+    var detail=Vue.extend({
+        template:'#detail'
+    });
+
+    // 关联
+    var router = new VueRouter({
+        routes:[
+            {path:'/home',component:Home,
+            // 路由多层嵌套
+            children:[
+                {path:'login',component:login},
+                {path:'reg',component:reg},
+            ]},
+
+            {path:'/news',component:News,
+            children:[
+                // id参数
+                {path:'detail/:id',component:detail},
+            ]},
+            // 重定向
+            {path:'',redirect:'/home'}
+        ]
+    })
+
+    new Vue({
+        el:'#box',
+        // 启动路由
+        router:router,
+    })
+</script>
+</html>

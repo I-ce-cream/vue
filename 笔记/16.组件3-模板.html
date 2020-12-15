@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../js/vue.js"></script>
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script src="../js/lodash.js"></script>
+</head>
+<body>
+    <div id='app'>
+        <v-aaa></v-aaa>
+        
+    </div>
+</body>
+<!-- ！！！组件模板内只能包含一个根元素 -->
+<!-- 组件 -->
+
+<!-- 组件内模板  template  实现方式 -->
+<template id='bbb'>
+    <div>
+        <h2 @click="change">{{msg}}</h2>
+        <ul>
+            <li v-for="item in arr">{{item}}</li>
+        </ul>
+    </div>
+</template>
+
+<!-- 组件内模板  script  实现方式 -->
+<script type="x-template" id="aaa">
+    <!-- <h2 @click="change">{{msg}}</h2> -->
+    <ul>
+        <li v-for="item in arr">{{item}}</li>
+    </ul>
+</script>
+
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            arr:['a','b','c']
+        },
+        components:{
+            'v-aaa':{
+                data(){
+                    return{
+                        msg:'welcome',
+                        arr:['a','b','c'],
+                    }
+                },
+                methods:{
+                    change(){
+                        this.msg='abc'
+                    }
+                },
+                template:'#bbb',
+            }
+        },
+    })
+</script>
+</html>

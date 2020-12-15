@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>v-text和v-html指令</title>
+</head>
+<body>
+<!--
+v-text  以文本方式插入数据
+v-html  以html方式插入数据
+
+v-text指令和插值表达式的区别
+1.v-text指令默认没有插值表达式闪烁问题
+2.插值表达式 默认 只替换表达式区域的数据，而v-text会替换掉对应标签里的全部内容
+
+vue模板中插入数据方式
+1.插值表达式
+2.vue指令  v-html  v-text
+-->
+
+<div id="app">
+    <!-- 插值表达式   -->
+    <div>{{msg}}</div>
+    <div v-text="msg"></div>
+
+    <div>{{msg2}}</div>
+    <!-- 以html方式插入   -->
+    <div v-html="msg2"></div>
+    
+
+    <!--在插值表达式里使用函数    -->
+    <!--无论在插值表达式还是在vue指令中，都是以js表达式的方式来解析数据
+    所以js表达式能做的操作(调用函数，字符串拼接)
+    vue指令和插值表达式都能做
+    -->
+    <div>{{msg.toUpperCase()+'bb'}}</div>
+    <div v-text="msg.toUpperCase()+'cc'"></div>
+
+</div>
+<script src="../js/vue.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            msg:'欢迎使用vue',
+            msg2:'<h1>这是以dddd的h1标签</h1>'
+        },
+    })
+</script>
+
+</body>
+</html>

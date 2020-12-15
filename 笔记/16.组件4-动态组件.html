@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../js/vue.js"></script>
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script src="../js/lodash.js"></script>
+</head>
+<body>
+    <div id='app'>
+        <input type="button" v-model="name" @click="change">
+        <br>
+        <!-- 使用components  is属性可以通过 v-on事件绑定  修改显示的组件 -->
+        <component :is="a"></component>
+    </div>
+    
+    
+</body>
+
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            a:'aaa',
+            name:'aaa组件',
+        },
+        methods:{
+            change(){
+                this.a=(this.a=='aaa'?'bbb':'aaa');
+                this.name=(this.a=='aaa'?'aaa组件':'bbb组件');
+            },
+        },
+        components:{
+            'aaa':{
+                template:'<h2>这是aaa组件</h2>'
+            },
+            'bbb':{
+                template:'<h2>这是bbb组件</h2>'
+            },
+        },
+    })
+</script>
+</html>

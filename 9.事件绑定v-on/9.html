@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>属性绑定v-bind</title>
+</head>
+<body>
+<script src="../js/vue.js"></script>
+<!--
+在vue里可以通过 v-on事件绑定机制来给元素添加事件
+在视图里面能够使用的属性或方法必须在vue对象内定义过
+
+v-on: 可以简写为 @
+
+
+v-on指令事件绑定流程
+1.在视图标签里通过v-on指令绑定事件
+2.zaivue对象配置methods属性中定义使用的方法
+-->
+
+<div id="app">
+    <button id="btn">surprise！</button>
+
+    <button v-on:click="show">surprise！2</button>
+    <!--         click  mouseover mouseout mousedown  dblclick-->
+    <!--鼠标事件  点击    移入      移出      点击        双击-->
+
+    <button @dblclick="show2">surprise!3</button>
+</div>
+
+<script>
+    new Vue({
+        el:'#app',//element
+        data:{
+            msg:'欢迎光临',
+            myTitle:'vue属性 p标签',
+            myHref:'https://fanrenyi.com',
+        },
+        methods:{
+            show:function () {
+                alert('vue show');
+            },
+            show2:function(){
+                alert('鼠标移动到按钮上');
+            },
+        },
+    });
+    document.getElementById('btn').onclick=function () {
+      alert('dasdfasdf');
+    };
+</script>
+</body>
+</html>

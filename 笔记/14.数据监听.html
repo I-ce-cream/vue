@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../js/vue.js"></script>
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script src="../js/lodash.js"></script>
+</head>
+<body>
+    <div id='app'>
+        <!-- json  显示json格式数据 -->
+        {{a | json}}
+        <br>
+        {{b}}
+    </div>
+</body>
+
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            a:{name:'abc',age:14},
+            b:2,
+        }
+
+    });
+
+    //浅度监视  无法监视json等内部数据变更
+    // 深度监视  后面增加deep参数 可以监视参数内部数据变化
+    // vm.$watch('a',function(){
+    //     alert('发生了变化');
+    //     // this.b=456;
+    // })
+    vm.$watch('a',function(){
+        alert('发生了变化');
+        // this.b=456;
+    },{deep:true});
+    document.onclick=function(){
+        vm.a.name = 'aaa';
+    }
+</script>
+
+</html>

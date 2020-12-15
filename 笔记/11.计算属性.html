@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+    <div id='app'>
+        {{a}}
+        <br>
+        {{b}}
+    </div>
+    
+</body>
+<script>
+    // vm  vue的实例
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            a:1,
+        },
+        // computed  计算属性
+        // 里面存放的是属性  和data一致  只是使用函数写法
+        // 显示内容为返回值
+
+        // computed里可以放置一些业务逻辑代码 一定要return
+        computed:{
+            // 简单写法  只能显示，不能赋值  默认调用get
+            // b:function(){
+            //     return this.a;
+            // }
+
+            b:{
+                get:function(){
+                    return this.a;
+                },
+                set:function(val){
+                    this.a = val;
+                }
+            }
+        },
+    });
+
+    document.onclick=function(){
+        vm.b = 101;
+    };
+</script>
+</html>

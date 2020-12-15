@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+    <div id='app'>
+        <span v-text="a"></span>
+    </div>
+    
+</body>
+
+<!-- 
+
+vm.$el      元素
+vm.$data    数据
+vm.$mount   手动挂载 vue 程序
+
+实例vue 里面保存的是属性，非vue自带属性的都是自定义属性
+vm.$options 获取自定义属性使用
+
+vm.$destory 销毁对象
+vm.$log     ***2.0被移除
+
+
+ -->
+<script>
+    // vm  vue的实例
+    // 选择器可以使用对象 id  使用id时  名称前需要加符号  # 或 .
+    // 选择器可以直接使用对象  不能用body  可以使用 div span 等
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            a:1,
+            b:2,
+        },
+        
+        aa:123,//自定义属性  静态属性  不在vue 默认属性中  使用$options 访问
+        show:function(){
+            alert('adqwe');
+        },
+    });
+
+    
+    // console.log(vm.$el);
+    // vm.$el 就是元素
+    // vm.$el.style.background='red';
+
+    // console.log(vm.$data.a);
+
+    //vue实例没有el时可以使用 mount 绑定选择器  手动挂载
+    // vm.$mount('#app');
+
+    // vm.$options.show();
+    // console.log(vm.$options.aa);
+
+</script>
+</html>
